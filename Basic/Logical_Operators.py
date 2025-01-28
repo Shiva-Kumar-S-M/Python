@@ -34,7 +34,7 @@
 #     print(f"you are {K} Pounds")
 
 
- #while loop
+#while loop
 # i=1
 # while i<=5:
 #     print('*' * i)
@@ -121,11 +121,11 @@
 # print(names)
 
 #print largest number in given list
-numbers=[10,20,30,40,50,60]
-max=numbers[0]
-for num in numbers:
-    if num > max:
-        max=num
-print(max)
+# numbers=[10,20,30,40,50,60]
+# max=numbers[0]
+# for num in numbers:
+#     if num > max:
+#         max=num
+# print(max)
 
 
