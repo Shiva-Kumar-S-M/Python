@@ -59,29 +59,73 @@
 
 
 #Car game
-command=""
-started=False
-while True:
-    command=input("> ").lower()
-    if command == "start":
-        if started:
-            print("Car alreday started")
-        else:
-            started=True
-            print("Car has started")
-    elif command =="stop":
-        if not started:
-            print("Car already stopped")
-        else:
-            started=False
-            print("Car has stopped")
-    elif command =="help":
-        print("""
-start = to start the car
-stop = to stop the car
-quit=to quit the game""")
-    elif command=="quit":
-        break
-    else:
-        print("I dont understand that")
+# command=""
+# started=False
+# while True:
+#     command=input("> ").lower()
+#     if command == "start":
+#         if started:
+#             print("Car alreday started")
+#         else:
+#             started=True
+#             print("Car has started")
+#     elif command =="stop":
+#         if not started:
+#             print("Car already stopped")
+#         else:
+#             started=False
+#             print("Car has stopped")
+#     elif command =="help":
+#         print("""
+# start = to start the car
+# stop = to stop the car
+# quit=to quit the game""")
+#     elif command=="quit":
+#         break
+#     else:
+#         print("I dont understand that")
+
+
+#for loop
+
+# for item in range(10):
+#     print(item)
+
+
+# prices = [10,20,36,54,55]
+# total=0
+# for price in prices:
+#     total+=price
+# print(f"Total:{total}")
+
+#nested loops
+# for x in range(4):
+#     for y in range(3):
+#         print(f'({x},{y})')
+
+# num=[5,2,5,2,2]
+# for nums in num:
+#     total=('*'*nums)
+#     print(total)
+
+# number=[1,1,1,4]
+# for x_count in number:
+#     output=''
+#     for i in range(x_count):
+#         output+='+'
+#     print(output)
+
+# #list
+# names=['shivu','itachi','madara','obito']
+# names[0]='Shivu'
+# print(names)
+
+#print largest number in given list
+numbers=[10,20,30,40,50,60]
+max=numbers[0]
+for num in numbers:
+    if num > max:
+        max=num
+print(max)
+
 
