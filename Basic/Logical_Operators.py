@@ -129,3 +129,8 @@
 # print(max)
 
 
+# We must all suffer one of two things
+#  the pain of discipline or the pain of regret
+#  One pain strengthens you; the other haunts you
+#  Regret lasts forever, but discipline only hurts in the moment
+#   Which one are you willing to endure
