@@ -41,7 +41,7 @@
 # print(unique)
 
 # tuples which are immutable
-number=(1,2,3)
+# number=(1,2,3)
 # can have only 2 methods count and index and expect these are advanced topics
 
 
@@ -49,3 +49,49 @@ number=(1,2,3)
 # #  num=(1,2,3,4)  applicable for list also
 # a,b,c,d=num
 # print(a+b+c+d)
+
+
+# Dictionaries =  key value pairs
+# customer={
+#     "Name":"Shivu",
+#     "age":19,
+#     "Email":"Shivu@gmail.com"
+# }
+# customer["Name"]="virat"
+# print(customer["Name"])
+# print(customer.get("Phone",897146987))
+
+
+
+# phone=input("Phone:")
+# digits_map={
+#     "1":"One",
+#     "2":"Two",
+#     "3":"Three",
+#     "4":"Four"
+# }
+
+# output=''
+# for num in phone:
+#     output+= digits_map.get(num,"!")+ " "
+# print(output)
+
+
+# Functions : breaks code to smaller reusable 
+
+# def greet_user():
+#     print("Hi There !")
+#     print("Welcome to alvas")
+
+# print("Start")
+# greet_user()
+# print("Finish")
+
+# use of arguments
+# def greet_user(name , age):     parameters --placeholder for info
+    # print(f'Hi {name} !')
+    # print("Welcome to my broken Heart")
+
+# greet_user("Sanjana",19)     arguments --the info we supply
+
+#  1st positional arguments and  then use keyword arguments
