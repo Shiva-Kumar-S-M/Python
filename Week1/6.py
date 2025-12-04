@@ -41,3 +41,10 @@ for u in range(1, n + 1):
 # Print final distances
 for v in range(1, n + 1):
     print(f"distance of source {source} to {v} is {D[v]}")
+
+class Solution:
+    def countCollisions(self, directions: str) -> int:
+        directions = directions.lstrip("L")
+        directions = directions.rstrip("R")
+
+        return directions.count("R") + directions.count("L")
