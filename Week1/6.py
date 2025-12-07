@@ -95,4 +95,8 @@ class Solution:
             sum[r+2]=(sum[r+1]+cnt)%MOD
 
         return cnt
-    
+
+
+class Solution:
+    def countOdds(self, low: int, high: int) -> int:
+        return (high + 1) // 2 - (low // 2)
