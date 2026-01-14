@@ -1,5 +1,9 @@
 MAX_VALUE = 999
 
+from typing import List
+from collections import deque
+from math import sqrt, gcd
+
 print("Enter the number of vertices")
 n = int(input())
 
@@ -42,7 +46,7 @@ for u in range(1, n + 1):
 for v in range(1, n + 1):
     print(f"distance of source {source} to {v} is {D[v]}")
 
-class Solution:
+class CollisionSolution:
     def countCollisions(self, directions: str) -> int:
         directions = directions.lstrip("L")
         directions = directions.rstrip("R")
@@ -50,67 +54,69 @@ class Solution:
         return directions.count("R") + directions.count("L")
 
 
-class Solution:
+class PartitionsSumSolution:
     def countPartitions(self, nums: List[int]) -> int:
         return (len(nums) - 1) * (~sum(nums) & 1)
 
 
-class Solution:
+class PartitionsKSolution:
     def countPartitions(self, nums, k):
-        n=len(nums)
-        MOD=10**9+7
+        n = len(nums)
+        MOD = 10**9 + 7
 
-        sum=[0]*(n+2)
-        sum[1]=1
+        pref = [0] * (n + 2)
+        pref[1] = 1
 
-        qMax=deque()  
-        qMin=deque() 
+        qMax = deque()
+        qMin = deque()
 
-        l=0
-        cnt=0
+        l = 0
+        cnt = 0
 
         for r, x in enumerate(nums):
 
-            # max queue 
-            while qMax and qMax[-1]<x:
+            # max queue
+            while qMax and qMax[-1] < x:
                 qMax.pop()
             qMax.append(x)
 
-            # min queue 
-            while qMin and qMin[-1]>x:
+            # min queue
+            while qMin and qMin[-1] > x:
                 qMin.pop()
             qMin.append(x)
 
             # shrink window
-            while qMax[0]-qMin[0]>k:
-                y=nums[l]
-                if qMax[0]==y:
+            while qMax[0] - qMin[0] > k:
+                y = nums[l]
+                if qMax[0] == y:
                     qMax.popleft()
-                if qMin[0]==y:
+                if qMin[0] == y:
                     qMin.popleft()
-                l+=1
+                l += 1
 
-            #  update cnt & sum[r+2]
-            cnt=(sum[r+1]-sum[l])%MOD
-            sum[r+2]=(sum[r+1]+cnt)%MOD
+            # update cnt & pref[r+2]
+            cnt = (pref[r + 1] - pref[l]) % MOD
+            pref[r + 2] = (pref[r + 1] + cnt) % MOD
 
         return cnt
 
 
-class Solution:
+class OddsSolution:
     def countOdds(self, low: int, high: int) -> int:
         return (high + 1) // 2 - (low // 2)
 
-class Solution:
+class TriplesSolution:
     def countTriples(self, n: int) -> int:
-        cnt=0
-        nsqrt=int(sqrt(n))
-        for s in range(2, nsqrt+1):
-            for t in range((s&1)+1, s, 2):
-                if gcd(s,t)!=1: continue
-                c=s*s+t*t
-                if c>n: break
-                k=n//c
-                cnt+=2*k
+        cnt = 0
+        nsqrt = int(sqrt(n))
+        for s in range(2, nsqrt + 1):
+            for t in range((s & 1) + 1, s, 2):
+                if gcd(s, t) != 1:
+                    continue
+                c = s * s + t * t
+                if c > n:
+                    break
+                k = n // c
+                cnt += 2 * k
         return cnt
         
